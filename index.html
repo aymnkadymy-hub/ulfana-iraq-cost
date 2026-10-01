@@ -131,15 +131,15 @@
 
 <section class="slide story wide" id="deepseek-or-gemma" data-title="DeepSeek أم gemma3:4b؟" data-chapter="الكلفة" aria-labelledby="t7g">
  <div class="copy"><span class="eyebrow">الكلفة</span><h2 id="t7g">DeepSeek أم gemma3:4b على بطاقاتنا؟</h2>
-  <p class="body">DeepSeek يُدفع له عن كلّ سؤال، فهو الأرخص ما دام الطلاب قليلين. gemma3:4b يُدفع أجرُ بطاقاته كاملاً ولو لم يسأل أحد، فيغلو في البداية ويرخص مع الكثرة. <b>يتعادلان عند نحو 50 ألف طالب.</b></p>
+  <p class="body">DeepSeek يُدفع له عن كلّ سؤال، فهو الأرخص ما دام الطلاب قليلين. gemma3:4b يُدفع أجرُ بطاقاته كاملاً ولو لم يسأل أحد، فيغلو في البداية ويرخص مع الكثرة. <b>يتعادلان عند نحو 50 ألف طالب.</b> لكنّ الكلفة ليست كلّ شيء: على الأسئلة نفسها أجاب gemma3:4b صحيحاً على <b>55</b> من 107، وDeepSeek على <b>84</b>.</p>
  <div class="tbl-wrap"><table class="tbl versus-tbl">
   <tr><th></th><th>DeepSeek</th><th class="g">gemma3:4b على بطاقاتٍ مستأجرة</th></tr>
   <tr><td>المنصّة كلّها لصفٍّ من 500 طالب</td><td class="n">73 ألف د.ع<span class="usd">$55</span></td><td class="n g">718 ألف د.ع<span class="usd">$544</span></td></tr>
   <tr><td>عند 50 ألف طالب</td><td class="n">2.0 مليون د.ع<span class="usd">$1,501</span></td><td class="n g">1.8 مليون د.ع<span class="usd">$1,355</span></td></tr>
   <tr class="key"><td>كلّ طلبة الجامعات (1.57 مليون)</td><td class="n">42.8 مليون د.ع<span class="usd">$32,418</span></td><td class="n g">22.0 مليون د.ع<span class="usd">$16,696</span></td></tr>
   <tr><td>العتاد فوق خوادم بغداد</td><td>لا شيء للأجوبة</td><td class="g">بطاقتا RTX 4090 على الأقلّ، و18 لكلّ الجامعات</td></tr>
-  <tr><td>الجودة على أسئلة الكتب</td><td>84 من 107 مع المكتبة، و39 وحده (2 تشرين الأوّل)</td><td class="g">76 من 107 مع المكتبة، و21 وحده (23 أيلول)</td></tr>
-  <tr><td>زمن الجواب</td><td>3.9–8.2 ثانية على الموقع الحيّ</td><td class="g">9–30 ثانية على حاسوب المنصّة؛ على RTX 4090 لم يُقَس</td></tr>
+  <tr><td>الجودة على أسئلة الكتب</td><td>84 من 107 مع المكتبة، و39 وحده (2 تشرين الأوّل)</td><td class="g">55 من 107 مع المكتبة، و11 خطأً (الأدلّة نفسها، تقدير أعمى)</td></tr>
+  <tr><td>زمن توليد الجواب (المُحفِّزات نفسها)</td><td>1.2 ثانية وسيطاً (flash)؛ والجواب الكامل على الموقع 3.9–8.2 ثانية</td><td class="g">5.7 ثانية وسيطاً على حاسوب المنصّة (RTX 3050)؛ على RTX 4090 لم يُقَس</td></tr>
   <tr><td>أين يذهب سؤال الطالب</td><td>إلى DeepSeek خارج العراق</td><td class="g">إلى بطاقاتٍ نستأجرها خارج العراق، بلا طرفٍ ثالث يقرأ</td></tr>
   <tr><td>إذا تعطّل</td><td>ينتقل إلى v4-pro ثمّ إلى gemma المحلّيّ خلال 12 ثانية</td><td class="g">البطاقة الاحتياط، ويمكن الرجوع إلى DeepSeek</td></tr>
  </table></div>
@@ -198,12 +198,12 @@
 
 <section class="slide story" id="gpus" data-title="متى نحتاج بطاقات الرسوم" data-chapter="العتاد" aria-labelledby="t11">
  <div class="copy"><span class="eyebrow">العتاد</span><h2 id="t11">متى نحتاج بطاقات الرسوم؟</h2>
-  <p class="body">وظيفتان يمكن أن تنتقلا إلى بطاقات رسوم: ترتيب المقاطع، ثمّ توليد الأجوبة بـ<b>gemma3:4b</b> بدل DeepSeek. الثانية أرخص بأربع مرّات عند كلّ الجامعات، لكنّ جودتها تُقاس أوّلاً.</p>
+  <p class="body">وظيفتان يمكن أن تنتقلا إلى بطاقات رسوم: ترتيب المقاطع، ثمّ توليد الأجوبة بـ<b>gemma3:4b</b> بدل DeepSeek. الثانية أرخص بأربع مرّات عند كلّ الجامعات، لكنّ gemma3:4b أجاب صحيحاً على 55 من 107 مقابل 84 لـDeepSeek.</p>
   <p class="basis"><b>على ماذا اعتمدنا:</b> <span class="src mea">مقيس</span> RTX 3050 على حاسوب المنصّة: 3 أجوبة متوازية، نحو 13 ثانية للجواب · <span class="src pub">منشور</span> مقياس vLLM المنشور لـRTX 4090 (5.96 طلباً في الثانية لنموذج 7B) مضروباً في 0.4 للاستعمال الحيّ · <span class="src off">رسميّ</span> أسعار الاستئجار في RunPod وHetzner · <span class="src cal">محسوب</span> كلفة DeepSeek من النموذج</p></div>
  <div class="visual"><div class="tbl-wrap"><table class="tbl">
   <tr><th>الوظيفة</th><th>لكلّ طلبة الجامعات</th><th>الكلفة الشهريّة</th><th>القرار</th></tr>
   <tr><td>ترتيب مقاطع الكتب</td><td>4 بطاقات L4 (20 سؤالاً في الثانية لكلّ بطاقة)</td><td class="n">≈ 1.1 مليون د.ع<span class="usd">$868</span></td><td>يُغني عن 49 خادماً</td></tr>
-  <tr class="g"><td>الأجوبة وأدوات الطالب بـgemma3:4b بدل DeepSeek</td><td>18 بطاقة RTX 4090 (منها واحدةٌ احتياط)</td><td class="n">5.9 مليون د.ع<span class="usd">$4,464</span></td><td>مقابل 26.6 مليوناً لـDeepSeek ($20,187)، بجودةٍ تُقاس أوّلاً</td></tr>
+  <tr class="g"><td>الأجوبة وأدوات الطالب بـgemma3:4b بدل DeepSeek</td><td>18 بطاقة RTX 4090 (منها واحدةٌ احتياط)</td><td class="n">5.9 مليون د.ع<span class="usd">$4,464</span></td><td>مقابل 26.6 مليوناً لـDeepSeek ($20,187)، لكنّ الجودة 55 مقابل 84 من 107</td></tr>
   <tr class="g"><td>البديل الأغلى: Hetzner GEX44 (RTX 4000 Ada)</td><td>56 بطاقة</td><td class="n">16.0 مليون د.ع<span class="usd">$12,152</span></td><td>أثبت عقداً، وأبطأ بثلاث مرّات</td></tr>
   <tr class="g"><td>إن خدمت البطاقةُ 2.4 جواباً فقط</td><td>25 بطاقة RTX 4090</td><td class="n">8.2 مليون د.ع<span class="usd">$6,200</span></td><td>ويبقى أرخص من DeepSeek</td></tr>
  </table></div></div>
@@ -268,14 +268,14 @@
 
 <section class="slide story" id="kpi" data-title="مؤشّر المكتبة الناطقة" data-chapter="الأدلّة" aria-labelledby="t16">
  <div class="copy"><span class="eyebrow">الأدلّة</span><h2 id="t16">مؤشّر المكتبة الناطقة</h2>
-  <p class="body">على 107 أسئلة من كتب المكتبة أجابت المكتبة مع gemma3:4b إجاباتٍ صحيحة على <b>76</b>، وgemma وحده على <b>21</b> (23 أيلول 2026).</p>
-  <p class="body">ومع DeepSeek (2 تشرين الأوّل): المكتبة <b>84</b> من 107، وDeepSeek وحده <b>39</b>. الأجوبة الخاطئة نزلت من 6 إلى 1. النموذج القويّ لا يعرف ما في كتب الطالب، والمكتبة هي التي تعرفه.</p>
-  <p class="basis"><b>على ماذا اعتمدنا:</b> <span class="src mea">مقيس</span> 107 أسئلة مولَّدة من مقاطع حقيقيّة في كتب المستخدمين (67 + 40)، بأداة frozen_eval.py، وتقديرٌ أعمى بمفتاحٍ مختوم، واختبار McNemar للأزواج (المكتبة أفضل في 47 سؤالاً وأسوأ في 2، p أقلّ من واحد في المليار). القياسان في يومين مختلفين فلا يُقارَن gemma بـDeepSeek مقارنةً دقيقة. المقدِّر Claude والعمى جزئيّ</p></div>
- <figure class="main-chart visual"><figcaption>إجابات صحيحة ومكتملة من 107</figcaption><div class="hbars">
-  <div class="hbar"><span>gemma3:4b وحده</span><div class="track"><i class="fill dim" style="--w:19.6%"></i><b class="val" style="--w:19.6%">21</b></div></div>
-  <div class="hbar"><span>gemma3:4b مع المكتبة</span><div class="track"><i class="fill" style="--w:71%"></i><b class="val in">76</b></div></div>
+  <p class="body">107 أسئلة من كتب المستخدمين، بالأدلّة المجمَّدة نفسها لكلّ ذراع، وتقديرٌ أعمى: DeepSeek مع المكتبة <b>84</b>، وgemma3:4b مع المكتبة <b>55</b>، وDeepSeek وحده <b>39</b>.</p>
+  <p class="body">النموذج القويّ لا يعرف ما في كتب الطالب، والمكتبة هي التي تعرفه. والنموذج الصغير مع المكتبة يتقدّم على القويّ وحده، لكنّه يتأخّر عن القويّ معها بـ29 سؤالاً.</p>
+  <p class="basis"><b>على ماذا اعتمدنا:</b> <span class="src mea">مقيس</span> 107 أسئلة مولَّدة من مقاطع حقيقيّة في كتب المستخدمين (67 + 40)، بأداة frozen_eval.py، وتقديرٌ أعمى بمفتاحٍ مختوم، واختبار McNemar للأزواج: المكتبة مع DeepSeek أفضل من DeepSeek وحده في 47 سؤالاً وأسوأ في 2، ومن gemma مع المكتبة في 30 وأسوأ في 1. قياس 23 أيلول (gemma مع المكتبة 76، أدلّةٌ ملتقطةٌ يوماً آخر) لا يُقارَن بهذا. المقدِّر Claude والعمى جزئيّ</p></div>
+ <figure class="main-chart visual"><figcaption>إجابات صحيحة ومكتملة من 107 · الأسئلة والأدلّة نفسها · 2 تشرين الأوّل</figcaption><div class="hbars">
   <div class="hbar"><span>DeepSeek وحده</span><div class="track"><i class="fill dim" style="--w:36.4%"></i><b class="val" style="--w:36.4%">39</b></div></div>
+  <div class="hbar"><span>gemma3:4b مع المكتبة</span><div class="track"><i class="fill" style="--w:51.4%"></i><b class="val in">55</b></div></div>
   <div class="hbar"><span>DeepSeek مع المكتبة</span><div class="track"><i class="fill alt" style="--w:78.5%"></i><b class="val in">84</b></div></div>
+  <p class="scale-note">الأجوبة الخاطئة: DeepSeek وحده 6 · gemma مع المكتبة 11 · DeepSeek مع المكتبة 1</p>
  </div></figure>
 </section>
 
@@ -294,7 +294,7 @@
   <tr><td>سرعة gemma3:4b على بطاقة RTX 4090 (3.6 أجوبة في الثانية)</td><td>لم نجد مقياساً منشوراً له؛ مشتقٌّ من مقياس vLLM لنموذج 7B (2.4) مضروباً في 1.5 لنصف الأوزان، والمدى 2.4 إلى 4.8</td><td><span class="src asm">افتراض</span></td></tr>
   <tr><td>أجر البطاقات</td><td>RunPod لـRTX 4090 ($0.34 للساعة)، وHetzner GEX44 (184 يورو شهريّاً)</td><td><span class="src off">رسميّ</span></td></tr>
   <tr><td>القسط الجامعيّ</td><td>دليل الجامعات الأهليّة 2025/2026</td><td><span class="src off">رسميّ</span></td></tr>
-  <tr><td>مؤشّر المكتبة الناطقة</td><td>107 أسئلة مجمَّدة من كتب المستخدمين، وتقديرٌ أعمى، واختبار McNemar</td><td><span class="src mea">مقيس</span></td></tr>
+  <tr><td>مؤشّر المكتبة الناطقة: 84 · 55 · 39</td><td>107 أسئلة مجمَّدة من كتب المستخدمين، الأدلّة نفسها لكلّ ذراع، وتقديرٌ أعمى، واختبار McNemar</td><td><span class="src mea">مقيس</span></td></tr>
  </table></div>
  <p class="basis legend-line"><span class="src off">رسميّ</span> من جهةٍ حكوميّة أو صفحة مزوّد · <span class="src mea">مقيس</span> على أولفانا نفسها · <span class="src pub">منشور</span> مقياسٌ منشور لغيرنا · <span class="src asm">افتراض</span> لم يُقَس على طلابٍ بعد · <span class="src cal">محسوب</span> من الثلاثة الأولى بنموذجٍ يُعاد تشغيله بأمرٍ واحد</p></div>
 </section>
@@ -306,7 +306,7 @@
    <li>قبل 10 آلاف طالب: إعادة تصميم المزامنة، وتحديد خيوط مُعيد الترتيب.</li>
    <li>قبل 50 ألفاً: قاعدة بيانات ومخزن متّجهات منفصلان.</li>
    <li>من نحو 186 ألفاً: بطاقات رسوم لترتيب المقاطع، واستضافة في مركز بياناتٍ عراقيّ.</li>
-   <li>من نحو 50 ألفاً: gemma3:4b على بطاقاتنا بدل DeepSeek، إن قبلنا فرق الجودة (76 مقابل 84 من 107 مع المكتبة، في قياسين منفصلين).</li>
+   <li>من نحو 50 ألفاً: gemma3:4b أرخص، لكنّه يجيب صحيحاً على 55 من 107 مقابل 84. فيبقى DeepSeek حتّى يتحسّن النموذج المحلّيّ ويُعاد القياس.</li>
   </ul></div>
  <div class="student-orbit visual"><div class="orbit-ring"></div><div class="orbit-ring inner"></div><div class="student-center"><img src="assets/companions/ozis.svg" alt="أوزيس"><span>ulfana.com</span></div><span class="orbit-label one"><svg aria-hidden="true"><use href="#i-cap"/></svg>الطالب</span><span class="orbit-label two"><svg aria-hidden="true"><use href="#i-book"/></svg>كتبه</span><span class="orbit-label three"><svg aria-hidden="true"><use href="#i-people"/></svg>مجتمعه</span><i class="spark a">✦</i><i class="spark b">✧</i></div>
 </section>
