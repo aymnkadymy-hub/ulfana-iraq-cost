@@ -91,3 +91,33 @@ table.tbl{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
 table.tbl{font-size:13.5px}
 .wide .tbl-wrap{max-height:none}
 .tbl .usd{margin-inline-start:0;margin-inline-end:10px}
+/* على ماذا اعتمدنا: سطرٌ واحدٌ في كلّ شريحة، ونوعُ كلّ مصدر */
+.basis{font-size:13px;line-height:1.85;color:var(--muted);margin-top:12px;padding:8px 12px;border-inline-start:3px solid var(--gold);background:rgba(212,180,121,.10);border-radius:0 10px 10px 0}
+.basis>b{color:var(--brown);font-weight:700;margin-inline-end:4px}
+.src{display:inline-block;font-size:11px;font-weight:700;line-height:1;padding:3px 8px;border-radius:99px;white-space:nowrap;vertical-align:1px;color:var(--white)}
+.src.off{background:var(--brown)}.src.mea{background:var(--green)}.src.pub{background:#7d9384}
+.src.asm{background:var(--gold);color:var(--ink)}.src.cal{background:#9a7b5f}.src.code{background:var(--ink)}
+.tbl.sources td:last-child{white-space:nowrap}
+.legend-line{border:0;background:none;padding-inline:0}
+/* مقارنة DeepSeek بـgemma: شريطان لكلّ شريحة */
+.hbar.pair .tracks{display:flex;flex-direction:column;gap:3px}
+.hbar.pair .track{height:19px;border-radius:6px}
+.hbar.pair .fill{border-radius:6px}
+.hbar.pair .val{font-size:11.5px}
+.hbars:has(.pair){gap:6px}
+.pair-legend{display:flex;align-items:center;gap:8px;font-size:13px;margin:0 0 4px;flex-wrap:wrap}
+.pair-legend em{width:12px;height:12px;border-radius:3px;display:inline-block}
+.pair-legend small{color:var(--muted)}
+.tbl .g,.tbl th.g{color:var(--green)}
+.tbl td.g{font-weight:600}
+.gline{font-size:13px;color:var(--green);font-weight:600;margin:0;line-height:1.6}
+.tbl tr.g td:first-child{color:var(--green);font-weight:600}
+.stack-title{font-size:13.5px;font-weight:700;margin:12px 0 6px;color:var(--ink)}
+.stack-title:first-child{margin-top:0}
+.versus-tbl td:first-child{font-weight:600;white-space:nowrap}
+table.tbl.cost{font-size:12.5px}
+.tbl.cost td{padding:4px 8px;line-height:1.4}
+.tbl.cost th{padding:7px 8px;white-space:normal;line-height:1.35}
+.tbl.cost td:nth-child(2){white-space:nowrap}
+.versus>div{min-width:0}
+.versus .gnote{display:block;color:var(--green);font-size:13px;font-weight:600;margin-top:2px}
