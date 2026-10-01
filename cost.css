@@ -1,0 +1,93 @@
+/* أولفانا لطلاب العراق — مكوّنات الرسوم فوق هويّة العرض الأصليّ (slides.css) */
+.slide .visual{min-width:0}
+.lead-num{font:700 clamp(46px,6vw,86px)/1 'Noto Kufi Arabic',sans-serif;color:var(--brown);display:block;margin:6px 0 4px}
+.lead-num small{font-size:.38em;color:var(--muted);font-weight:500}
+.note{font-size:14px;color:var(--muted);line-height:1.8;margin-top:10px}
+.pill{display:inline-block;background:var(--white);border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:14px;color:var(--brown);margin:3px}
+.usd{color:var(--muted);font-size:.82em;direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+
+/* بطاقات الأرقام */
+.stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;width:100%}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;animation:arrive .6s both}
+.stat:nth-child(2){animation-delay:.08s}.stat:nth-child(3){animation-delay:.16s}.stat:nth-child(4){animation-delay:.24s}.stat:nth-child(5){animation-delay:.32s}.stat:nth-child(6){animation-delay:.4s}
+.stat b{font:700 clamp(24px,2.6vw,36px)/1.2 'Noto Kufi Arabic',sans-serif;color:var(--ink)}
+.stat span{font-size:15px;color:var(--muted);line-height:1.6}
+.stat.hot{background:var(--brown);border-color:var(--brown)}.stat.hot b,.stat.hot span{color:var(--white)}
+
+/* أعمدة أفقيّة (مقياس لوغاريتميّ معلَن) */
+.hbars{display:flex;flex-direction:column;gap:9px;width:100%}
+.hbar{display:grid;grid-template-columns:minmax(120px,30%) 1fr;align-items:center;gap:12px}
+.hbar>span{font-size:14px;line-height:1.45;color:var(--ink)}
+.hbar>span small{display:block;color:var(--muted);font-size:12px}
+.track{position:relative;height:30px;background:#efe6d8;border-radius:8px;overflow:visible}
+.fill{position:absolute;inset:0 0 0 auto;width:var(--w);background:linear-gradient(90deg,var(--gold),var(--brown));border-radius:8px;transform-origin:right;animation:grow 1s cubic-bezier(.2,.8,.2,1) both}
+.fill.alt{background:var(--green)}
+.fill.dim{background:#cbbca6}
+.hbar .val{position:absolute;inset-block:0;right:calc(var(--w) + 8px);display:flex;align-items:center;font-size:13px;font-weight:600;white-space:nowrap;color:var(--ink)}
+.hbar .val.in{right:auto;left:8px;color:var(--white)}
+@keyframes grow{from{transform:scaleX(.02)}to{transform:scaleX(1)}}
+.scale-note{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* شريط الأجزاء */
+.stack{display:flex;height:54px;border-radius:14px;overflow:hidden;width:100%;border:1px solid var(--line)}
+.stack i{display:block;height:100%;width:var(--w);animation:arrive .8s both}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;margin-top:16px;width:100%}
+.legend p{display:flex;align-items:center;gap:9px;font-size:15px;margin:0}
+.legend p b{margin-inline-start:auto;font-variant-numeric:tabular-nums}
+.legend em{width:14px;height:14px;border-radius:4px;flex-shrink:0}
+.c1{background:var(--brown)}.c2{background:var(--gold)}.c3{background:var(--green)}.c4{background:#9a7b5f}.c5{background:#c9b28a}.c6{background:#7d9384}.c7{background:#ddd2c1}
+
+/* الجداول */
+.tbl-wrap{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--white)}
+table.tbl{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+.tbl th{background:#efe6d8;color:var(--brown);font-weight:700;text-align:right;padding:9px 11px;white-space:nowrap}
+.tbl td{padding:8px 11px;border-top:1px solid #eee4d6;vertical-align:top;line-height:1.55}
+.tbl td.n{text-align:left;direction:ltr;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl tr.key td{background:#f6eedf;font-weight:700}
+.tbl .usd{display:block;font-size:12px}
+
+/* بطاقات المراحل */
+.stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%}
+.stage{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;animation:arrive .6s both}
+.stage h3{font:700 17px/1.4 'Noto Kufi Arabic',sans-serif;color:var(--brown);margin:0}
+.stage p{font-size:14px;line-height:1.7;margin:0}
+.stage .cost{font-weight:700;color:var(--ink)}
+.stage.gpu{border-color:var(--green);box-shadow:inset 4px 0 0 var(--green)}
+
+/* مقارنة كبيرة */
+.versus{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;width:100%}
+.versus>div{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:22px;text-align:center}
+.versus b{display:block;font:700 clamp(30px,3.6vw,52px)/1.15 'Noto Kufi Arabic',sans-serif;color:var(--brown)}
+.versus span{font-size:15px;color:var(--muted);line-height:1.7}
+.versus i{font-style:normal;font-size:28px;color:var(--gold)}
+
+/* قائمة أدلّة */
+.facts{display:flex;flex-direction:column;gap:9px;width:100%;margin:0;padding:0;list-style:none}
+.facts li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:15px;line-height:1.7;display:flex;gap:10px}
+.facts li::before{content:"✦";color:var(--gold)}
+.facts.warn li::before{content:"!";color:var(--white);background:var(--brown);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:3px}
+
+.companion-corner{width:96px;height:96px;object-fit:contain;animation:float 4s ease-in-out infinite}
+.wide .copy{max-width:none}
+.slide.wide{grid-template-columns:1fr!important}
+
+@media(max-width:800px){
+ .stat-grid,.stages,.legend{grid-template-columns:1fr}
+ .hbar{grid-template-columns:1fr;gap:4px}
+ .versus{grid-template-columns:1fr}
+ .versus i{display:none}
+ .companion-corner{width:70px;height:70px}
+}
+.body{font-size:clamp(16px,1.3vw,20px);line-height:1.9;margin:0 0 12px;color:var(--ink)}
+.body b{color:var(--brown)}
+.slide h2{margin-bottom:14px}
+.reduce .fill,.reduce .stat,.reduce .stage,.reduce .stack i{animation:none!important}
+@media(prefers-reduced-motion:reduce){.fill,.stat,.stage,.stack i,.companion-corner{animation:none!important}}
+/* إصلاحات بعد المعاينة */
+.hbar .val.in{left:auto;right:12px;color:var(--white)}
+.tbl td.n{direction:rtl;text-align:right}
+.tbl .usd{display:inline;margin-inline-start:6px;font-size:12px}
+.tbl td{padding:6px 10px}
+table.tbl{font-size:13.5px}
+.wide .tbl-wrap{max-height:none}
+.tbl .usd{margin-inline-start:0;margin-inline-end:10px}
